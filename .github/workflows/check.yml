@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
+      - name: Give permissions
+        run: chmod +x node_modules/.bin/jest
       - name: Install Dependancies
         run: npm i
       - name: Setup Node.js environment
